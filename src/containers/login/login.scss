@@ -1,0 +1,47 @@
+.login {
+    height: 100%;
+    background: #fff;
+    text-align: right;
+
+    .am-input-label.am-input-label-5 {
+        width: 60px;
+    }
+
+    .am-list-item.am-input-item {
+        position: relative;
+        padding-right: 3.2rem;
+        margin-right: 30px;
+    }
+
+    .get-code {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        padding: 4px 10px;
+        transform: translateY(-50%);
+        background: #ccc;
+        color: #999;
+        font-size: 20px;
+    }
+
+    .cal-code {
+        display: inline-block;
+        padding: 16px 30px 32px 0;
+        color: orange;
+    }
+
+    .am-button-primary {
+        margin: 0 30px;
+        background: orange;
+        border: none;
+    }
+
+    .code-btn {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #ccc;
+        color: #999;
+        border: none;
+    }
+}

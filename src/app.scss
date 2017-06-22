@@ -1,0 +1,76 @@
+@import './mixin/base';
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+	line-height: 1;
+    background-color: #ab3d37;
+}
+html,body,#content{
+	width: 100%;
+	height: 100%;
+}
+
+.page{
+	min-height: 100%;
+	background-color: #ab3d37;
+	background-image: url(./img/bg.jpg);
+	@extend %bg;
+	.btn{
+		width: 389px;
+		height: 158px;
+		@extend %lf-center;
+		z-index: 10;
+		@extend %bg;
+		background-image: url(./img/btn.png);
+		&:before{
+			content: '';
+			display: block;
+			width: 86px;
+			height: 38px;
+			@extend %bg;
+			@extend %center;
+		}
+	}
+	.ruleWrap{
+		@extend %center;
+		display: none;
+		background-color: rgba(#000,0.6);
+		&.show{
+			display: block;
+		}
+		z-index: 20;
+	}
+	.rule{
+		width: 411px;
+		height: 1154px;
+		@extend %lf-center;
+		@extend %bg;
+		top: 43px;
+		z-index: 10;
+		background-image: url(./img/rule.png);
+		.title{
+			width: 238px;
+			height: 62px;
+			@extend %lf-center;
+			top: 369px;
+			z-index: 10;
+		}
+		.text{
+			width: 316px;
+			margin: 0 auto;
+			padding-top: 490px;
+			line-height: 46px;
+			font-size: 27px;
+			color: #efe776;
+			text-shadow: 2px 2px 5px #7d2320;
+		}
+		.btn:before{
+			width: 150px;
+			height: 44px;
+			background-image: url(./img/go-home.png);
+		}
+	}
+}

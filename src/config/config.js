@@ -1,0 +1,1 @@
+export const GLOBAL_API_DOMAIN = 'http://test-swk-pay.kxtx.cn';   //接口地址
