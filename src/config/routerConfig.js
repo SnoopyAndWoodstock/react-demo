@@ -80,6 +80,13 @@ const routeConfig = [{
                 callback(null, require('../containers/calculator/calculator.component').default)
             })
         }
+    }, {
+        path: 'comment',
+        getComponents(location, callback) {
+            require.ensure([], function(require) {
+                callback(null, require('../containers/comment/comment.component').default)
+            })
+        }
     }]
 }];
 
