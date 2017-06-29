@@ -33,8 +33,8 @@ class CommentInput extends React.Component{
         if(this.props.onSubmit){
             const {username,content }=commentState.state;
             this.props.onSubmit({username,content})
+            commentState.setContent('');
         }
-        commentState.setContent();
     }
 
     closeAlert =key =>() =>{
@@ -46,8 +46,8 @@ class CommentInput extends React.Component{
            <div>
                 <div className="inpit-box">
                     <WhiteSpace />
-                    <InputItem clear placeholder="请输入名称"  onChange={this.bindName.bind(this)} >姓名</InputItem>
-                    <TextareaItem title="内容" placeholder="请输入评论内容" autoHeight onChange={this.bindContent.bind(this)}>
+                    <InputItem clear placeholder="请输入名称"  value={commentState.state.username} onChange={this.bindName.bind(this)} >姓名</InputItem>
+                    <TextareaItem title="内容" placeholder="请输入评论内容"  value={commentState.state.content} autoHeight onChange={this.bindContent.bind(this)}>
                     </TextareaItem>
                 </div>
                 <WhiteSpace size="lg" />

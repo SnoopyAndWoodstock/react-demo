@@ -18,11 +18,7 @@ class commentState {
 	}
 
 	@action setContent(txt) {
-		if (!!txt) {
-			this.state.content = txt;
-		} else {
-			this.state.content = '';
-		}
+		this.state.content = txt;
 	}
 
 	@action setTipMsg(txt) {
